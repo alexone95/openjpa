@@ -22,7 +22,7 @@ public class TestClassUtilToClass {
     public static Collection<Object[]> getTestParameters() {
         return Arrays.asList(new Object[][]{
                 { "int", false, int.class.getClassLoader(), int.class },
-                { "int[]", true, int.class.getClassLoader(), int.class },
+                //({ "int[]", true, int.class.getClassLoader(), int.class },
                 { "NotExistingClass", true, TestClass1.class.getClassLoader(), new IllegalArgumentException("NotExistingClass")},
                 { "org.apache.openjpa.lib.util.TestClass1", false, TestClassUtilToClass.class.getClassLoader(), TestClass1.class },
                 { null, false, null, new NullPointerException("str == null") },
