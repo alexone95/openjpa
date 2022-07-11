@@ -212,6 +212,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <!--turn on sources.jar generation -->
                 <createSource>verify</createSource>
                 <createSources>true</createSources>
@@ -289,6 +290,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <javadoc.additionalparam>
                     -generic
                     -umlautogen
@@ -368,6 +370,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <test.jvm.arguments>-Xmx${test.jvm.maxheapsize} -agentlib:jdwp=transport=dt_socket,server=y,address=8000</test.jvm.arguments>
             </properties>
         </profile>
@@ -380,6 +383,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <test.env>-Dtest.basedir=${basedir}/..</test.env>
                 <policy.file>${basedir}/../openjpa-persistence-jdbc/src/test/resources/j2.security.test.policy</policy.file>
                 <surefire.jvm.args>-Djava.security.manager -Djava.security.policy=${policy.file} ${test.env} ${test.jvm.arguments}</surefire.jvm.args>
@@ -394,6 +398,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <test.env>-Dtest.basedir=${basedir}/..</test.env>
                 <policy.file>${basedir}/../openjpa-persistence-jdbc/src/test/resources/j2.security.test.policy</policy.file>
                 <surefire.jvm.args>-Djava.security.manager -Djava.security.policy=${policy.file} ${test.env} ${test.jvm.arguments}</surefire.jvm.args>
@@ -442,6 +447,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>org.apache.derby.jdbc.EmbeddedDriver</connection.driver.name>
                 <connection.url>jdbc:derby:target/database/openjpa-derby-database;create=true</connection.url>
                 <connection.username />
@@ -464,6 +470,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <h2.version>1.4.200</h2.version>
                 <connection.driver.name>org.h2.Driver</connection.driver.name>
                 <connection.url>jdbc:h2:./target/database/openjpa-h2-database</connection.url>
@@ -493,6 +500,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <h2.version>2.0.202</h2.version>
                 <connection.driver.name>org.h2.Driver</connection.driver.name>
                 <connection.url>jdbc:h2:./target/database/openjpa-h2-database</connection.url>
@@ -534,6 +542,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>org.apache.derby.jdbc.EmbeddedDriver</connection.driver.name>
                 <connection.url>jdbc:derby:memory:openjpa-derby-inmem-database;create=true</connection.url>
                 <connection.username />
@@ -574,6 +583,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <openjpa.derbynet.url>jdbc:derby://localhost:1527/openjpa20;create=true;traceDirectory=target;traceFile=derby.log</openjpa.derbynet.url>
                 <openjpa.derbynet.driver>org.apache.derby.jdbc.ClientDriver</openjpa.derbynet.driver>
                 <!-- Note: commons-dbcp2 requires dummy values for uid/pwd -->
@@ -606,6 +616,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>org.hsqldb.jdbcDriver</connection.driver.name>
                 <!--<connection.url>jdbc:hsqldb:target/database/openjpa-hsqldb-database;create=true</connection.url>-->
                 <connection.url>jdbc:hsqldb:mem:openjpa22-hsqldb-database</connection.url>
@@ -634,6 +645,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>com.mysql.jdbc.Driver</connection.driver.name>
                 <!--<connection.url>jdbc:mysql://localhost/OPENJPA</connection.url>-->
                 <connection.url>${openjpa.mysql.url}</connection.url>
@@ -665,6 +677,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>com.mysql.jdbc.Driver</connection.driver.name>
 
                 <!-- default settings for local docker -->
@@ -733,6 +746,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>org.mariadb.jdbc.Driver</connection.driver.name>
                 <!--<connection.url>jdbc:mysql://localhost/OPENJPA</connection.url>-->
                 <connection.url>${openjpa.mariadb.url}</connection.url>
@@ -764,6 +778,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>org.mariadb.jdbc.Driver</connection.driver.name>
 
                 <!-- default settings for local docker -->
@@ -836,6 +851,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>org.postgresql.Driver</connection.driver.name>
                 <!--<connection.url>jdbc:postgresql://localhost/openjpa</connection.url>-->
                 <connection.url>${openjpa.postgresql.url}</connection.url>
@@ -868,6 +884,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>org.postgresql.Driver</connection.driver.name>
 
                 <!-- default settings for local docker -->
@@ -966,6 +983,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <mssql.maven.repo>http://not.real.repository</mssql.maven.repo>
                 <mssql.groupid>com.microsoft.sqlserver</mssql.groupid>
                 <mssql.artifactid>sqljdbc</mssql.artifactid>
@@ -1013,6 +1031,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>com.microsoft.sqlserver.jdbc.SQLServerDriver</connection.driver.name>
 
                 <!-- default settings for local docker -->
@@ -1087,6 +1106,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <jtds.version>1.2</jtds.version>
                 <connection.driver.name>net.sourceforge.jtds.jdbc.Driver</connection.driver.name>
                 <!--<connection.url>jdbc:jtds:sqlserver://localhost:1433/OPENJPA</connection.url>-->
@@ -1116,6 +1136,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <jtds.version>1.2</jtds.version>
                 <connection.driver.name>net.sourceforge.jtds.jdbc.Driver</connection.driver.name>
                 <!--<connection.url>jdbc:jtds:sybase://localhost/OPENJPA</connection.url>-->
@@ -1140,6 +1161,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>com.sybase.jdbc3.jdbc.SybDriver</connection.driver.name>
                 <!--<connection.url>jdbc:sybase:Tds:localhost:7100/OPENJPA</connection.url>-->
                 <connection.url>${openjpa.sybase.url}</connection.url>
@@ -1168,6 +1190,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <ingres.version>9.2-3.4.8</ingres.version>
                 <connection.driver.name>com.ingres.jdbc.IngresDriver</connection.driver.name>
                 <!--<connection.url>jdbc:ingres://localhost/OPENJPA</connection.url>-->
@@ -1197,6 +1220,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>herddb.jdbc.Driver</connection.driver.name>
                 <tests.openjpa.driverDataSource>simple</tests.openjpa.driverDataSource>
 
@@ -1263,6 +1287,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>${openjpa.custom.driverclass}</connection.driver.name>
                 <connection.url>${openjpa.custom.url}</connection.url>
                 <connection.username>${openjpa.custom.username}</connection.username>
@@ -1313,6 +1338,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <connection.driver.name>${openjpa.custom.driverclass}</connection.driver.name>
                 <connection.url>${openjpa.custom.url}</connection.url>
                 <connection.username>${openjpa.custom.username}</connection.username>
@@ -1382,6 +1408,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <db2.maven.repo>http://not.a.real.repository</db2.maven.repo>
                 <db2.groupid>com.ibm.db2</db2.groupid>
                 <db2.driver.artifactid>jcc-driver</db2.driver.artifactid>
@@ -1436,6 +1463,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <db2.maven.repo>http://not.a.real.repository</db2.maven.repo>
                 <db2.groupid>com.ibm.db2</db2.groupid>
                 <db2.driver.artifactid>jcc-driver</db2.driver.artifactid>
@@ -1520,6 +1548,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <ids.maven.repo>http://not.a.real.repository</ids.maven.repo>
                 <ids.groupid>com.ibm.db2</ids.groupid>
                 <ids.driver.artifactid>jcc-driver</ids.driver.artifactid>
@@ -1592,6 +1621,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <ids.maven.repo>http://not.a.real.repository</ids.maven.repo>
                 <ids.groupid>com.informix</ids.groupid>
                 <ids.driver.artifactid>informix-driver</ids.driver.artifactid>
@@ -1647,6 +1677,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <oracle.groupid>com.oracle.ojdbc</oracle.groupid>
                 <oracle.artifactid>ojdbc8</oracle.artifactid>
                 <oracle.version>19.3.0.0</oracle.version>
@@ -1753,6 +1784,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <oracle.maven.repo>http://not.a.real.repository</oracle.maven.repo>
                 <oracle.groupid>com.oracle.ojdbc</oracle.groupid>
                 <oracle.artifactid>ojdbc8</oracle.artifactid>
@@ -1785,6 +1817,7 @@
             <properties>
                 <sonar.organization>alexone95</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
                 <soliddb.maven.repo>http://not.a.real.repository</soliddb.maven.repo>
                 <soliddb.groupid>com.ibm.soliddb</soliddb.groupid>
                 <soliddb.driver.artifactid>soliddb</soliddb.driver.artifactid>
