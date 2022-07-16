@@ -35,6 +35,10 @@
     <name>OpenJPA Kernel</name>
     <description>OpenJPA Kernel</description>
 
+    <properties>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/jacocoreport/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.openjpa</groupId>
@@ -70,6 +74,12 @@
             <groupId>org.apache.xbean</groupId>
             <artifactId>xbean-asm9-shaded</artifactId>
             <version>${xbean.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-maven</artifactId>
+            <version>1.5.1</version>
+            <type>maven-plugin</type>
         </dependency>
     </dependencies>
 
@@ -158,6 +168,22 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.5.1</version>
+                <configuration>
+                    <targetClasses>
+                        <param>org.apache.openjpa.kernel.ResultShape</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>org.apache.openjpa.kernel.TestResultShapeAdd</param>
+                        <param>org.apache.openjpa.kernel.TestResultShapeBasic</param>
+                        <param>org.apache.openjpa.kernel.TestResultShapeNest</param>
+                        <param>org.apache.openjpa.kernel.TestResultShapeNestParent</param>
+                    </targetTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>

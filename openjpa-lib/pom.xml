@@ -78,6 +78,12 @@
             <artifactId>geronimo-validation_1.1_spec</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-maven</artifactId>
+            <version>1.5.1</version>
+            <type>maven-plugin</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -142,6 +148,21 @@ openjpa.enhancer.revision=${pcenhancer.git.revision}${uncommitted.changes}
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.5.1</version>
+                <configuration>
+                    <targetClasses>
+                        <param>org.apache.openjpa.lib.util.ClassUtil</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>org.apache.openjpa.lib.util.TestClassUtilToClass</param>
+                        <param>org.apache.openjpa.lib.util.TestClassUtilGetClassName</param>
+                        <param>org.apache.openjpa.lib.util.TestClassUtilGetPackageName</param>
+                    </targetTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>
