@@ -35,6 +35,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+      - name: Mutation Testing
+        run: mvn package org.pitest:pitest-maven:mutationCoverage surefire:test -Dtest=TestBufferedChannelWrite -DfailIfNoTests=false
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
