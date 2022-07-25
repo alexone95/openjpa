@@ -134,7 +134,7 @@
                                 <condition property="outdir" value="${project.build.outputDirectory}" else="${java.io.tmpdir}/openjpamvntmp">
                                     <available type="dir" file="${project.build.outputDirectory}" />
                                 </condition>
-                                <mkdir dir="${outdir}/META-INF" />
+                                <mkdir dir="${outdir}/META-INF" />coco
 
                                 <echo file="${outdir}/META-INF/org.apache.openjpa.revision.properties">
 revision.number=${git.revision}${uncommitted.changes}

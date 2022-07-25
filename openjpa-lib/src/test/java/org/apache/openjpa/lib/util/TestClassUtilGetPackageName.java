@@ -17,7 +17,7 @@ public class TestClassUtilGetPackageName {
     @Parameterized.Parameters
     public static Collection<Object[]> configure() {
         return Arrays.asList(new Object[][]{
-                { TestClassUtilToClass.class, "org.apache.openjpa.lib.util"},
+                { ClassUtilTest.class, "org.apache.openjpa.lib.util"},
                 { TestClass1.class, "org.apache.openjpa.lib.util"},
                 { TestClass1[].class, "org.apache.openjpa.lib.util"},
                 { long.class, ""},

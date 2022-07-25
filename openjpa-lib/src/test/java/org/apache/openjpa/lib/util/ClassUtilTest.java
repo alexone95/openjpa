@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class TestClassUtilToClass {
+public class ClassUtilTest {
     private final String classStr;
 
     private final Object result;
@@ -24,12 +24,12 @@ public class TestClassUtilToClass {
                 { "int", false, int.class.getClassLoader(), int.class },
                 //({ "int[]", true, int.class.getClassLoader(), int.class },
                 { "NotExistingClass", true, TestClass1.class.getClassLoader(), new IllegalArgumentException("NotExistingClass")},
-                { "org.apache.openjpa.lib.util.TestClass1", false, TestClassUtilToClass.class.getClassLoader(), TestClass1.class },
+                { "org.apache.openjpa.lib.util.TestClass1", false, ClassUtilTest.class.getClassLoader(), TestClass1.class },
                 { null, false, null, new NullPointerException("str == null") },
         });
     }
 
-    public TestClassUtilToClass (String classStr, Boolean resolve, ClassLoader loader, Object result){
+    public ClassUtilTest (String classStr, Boolean resolve, ClassLoader loader, Object result){
         this.classStr = classStr;
         this.resolve = resolve;
         this.loader = loader;
