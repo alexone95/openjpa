@@ -54,9 +54,8 @@ public class TestResultShapeNest {
             Assert.assertTrue(resultShapeParent.isNesting());
             Assert.assertTrue(resultShapeParent.isCompound());
             Assert.assertFalse(resultShapeParent.getChildren().isEmpty());
-        }
-        catch(Exception e) {
-            Assert.assertEquals(e.toString() ,response.toString());
+        } catch (Exception e) {
+            Assert.assertEquals(e.toString(), response.toString());
         }
     }
 }

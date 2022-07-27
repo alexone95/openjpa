@@ -43,8 +43,8 @@ public class TestResultShapeAdd {
     public void addTest() {
         try {
             resultShape.add(classes);
-        }catch(Exception e) {
-            Assert.assertEquals(e.toString() ,response.toString());
+        } catch (Exception e) {
+            Assert.assertEquals(e.toString(), response.toString());
         }
     }
 

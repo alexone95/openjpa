@@ -50,8 +50,7 @@ public class TestResultShapeNestParent {
         try {
             resultShapeChild.nest(resultShapeParent);
             resultShapeParent.nest(resultShapeChild);
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             Assert.assertEquals(e.toString(), result.toString());
         }
     }

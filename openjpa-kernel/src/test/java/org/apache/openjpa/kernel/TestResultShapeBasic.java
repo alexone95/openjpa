@@ -32,9 +32,9 @@ public class TestResultShapeBasic {
     }
 
     @Before
-    public void configureTests(){
-        try{
-            if (testName.getMethodName().startsWith("testBasic1")){
+    public void configureTests() {
+        try {
+            if (testName.getMethodName().startsWith("testBasic1")) {
                 resultShape = new ResultShape(cls);
             }
 
@@ -42,11 +42,10 @@ public class TestResultShapeBasic {
                 resultShape = new ResultShape(cls, primitive);
             }
 
-            if (testName.getMethodName().startsWith("testBasic3")){
+            if (testName.getMethodName().startsWith("testBasic3")) {
                 resultShape = new ResultShape<>(cls, fillStrategy, primitive);
             }
-        }
-        catch (NullPointerException e){
+        } catch (NullPointerException e) {
             resultShape = null;
         }
     }
@@ -66,14 +65,13 @@ public class TestResultShapeBasic {
     @Test
     public void testBasic1() {
         try {
-            Assert.assertEquals(resultShape.getType(),cls);
+            Assert.assertEquals(resultShape.getType(), cls);
             Assert.assertFalse(resultShape.isPrimitive());
-            if(alias!=null) {
+            if (alias != null) {
                 resultShape.setAlias(alias);
-                Assert.assertEquals(resultShape.getAlias(),alias);
+                Assert.assertEquals(resultShape.getAlias(), alias);
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             Assert.assertEquals(e.getClass(), res);
         }
@@ -82,17 +80,16 @@ public class TestResultShapeBasic {
     @Test
     public void testBasic2() {
         try {
-            Assert.assertEquals(resultShape.getType(),cls);
-            if(primitive)
+            Assert.assertEquals(resultShape.getType(), cls);
+            if (primitive)
                 Assert.assertTrue(resultShape.isPrimitive());
             else
                 Assert.assertTrue(resultShape.isCompound());
-            if(alias!=null) {
+            if (alias != null) {
                 resultShape.setAlias(alias);
-                Assert.assertEquals(resultShape.getAlias(),alias);
+                Assert.assertEquals(resultShape.getAlias(), alias);
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             Assert.assertEquals(e.getClass(), res);
         }
@@ -102,17 +99,16 @@ public class TestResultShapeBasic {
     public void testBasic3() {
         try {
             Assert.assertEquals(resultShape.getStrategy(), fillStrategy);
-            Assert.assertEquals(resultShape.getType(),cls);
-            if(primitive)
+            Assert.assertEquals(resultShape.getType(), cls);
+            if (primitive)
                 Assert.assertTrue(resultShape.isPrimitive());
             else
                 Assert.assertTrue(resultShape.isCompound());
-            if(alias!=null) {
+            if (alias != null) {
                 resultShape.setAlias(alias);
-                Assert.assertEquals(resultShape.getAlias(),alias);
+                Assert.assertEquals(resultShape.getAlias(), alias);
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             Assert.assertEquals(e.getClass(), res);
         }
