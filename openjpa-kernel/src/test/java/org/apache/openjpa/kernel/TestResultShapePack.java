@@ -17,17 +17,19 @@ public class TestResultShapePack {
     private final Object response;
     private final boolean primitive;
     private ResultShape<Object> resultShape;
-
     private final Class startingClass;
 
+    private final Class classChild;
+
     public TestResultShapePack(Class<?>[] classes, String[] aliases, Object[] values, boolean primitive,
-                               Class startingClass, Object response) {
+                               Class startingClass, Class classChild, Object response) {
         this.classes = classes;
         this.aliases = aliases;
         this.values = values;
         this.primitive = primitive;
         this.startingClass = startingClass;
         this.response = response;
+        this.classChild = classChild;
     }
 
     @Parameterized.Parameters
@@ -36,13 +38,20 @@ public class TestResultShapePack {
 
                 // Suite Test
                 {new Class[]{TestClass2.class, short.class}, new String[]{"TestClass2", "shortAlias"},
-                        new Object[]{new TestClass2(), 3}, false, Object.class, null},
-                {null, new String[]{"TestClass2", "shortAlias"},
-                        new Object[]{new TestClass2(), 3}, false, Object.class, new NullPointerException()},
-                {new Class[]{}, null, new Object[]{new TestClass2(), 3}, true, int.class,
+                        new Object[]{new TestClass2(), 3}, false, Object.class, null, null},
+
+                {null, new String[]{"TestClass2", "shortAlias"}, new Object[]{new TestClass2(), 3},
+                        false, Object.class, null, new NullPointerException()},
+
+                {new Class[]{}, null, new Object[]{new TestClass2(), 3}, true, int.class, null,
                         new ArrayIndexOutOfBoundsException()},
+
                 {new Class[]{TestClass1.class}, new String[]{"TestClass2"}, new Object[]{new TestClass1()},
-                        false, Object.class, null},
+                        false, Object.class, null, null},
+
+                // Coverage
+                {new Class[]{TestClass2.class, short.class}, new String[]{"TestClass2", "shortAlias"},
+                        new Object[]{new TestClass2(), 3}, false, Object.class, Object.class, null}
 
         });
     }
@@ -55,6 +64,8 @@ public class TestResultShapePack {
     @Test
     public void testPack() {
         try {
+            if (classChild != null)
+                resultShape.add(classChild);
             resultShape.pack(values, classes, aliases);
         } catch (Exception e) {
             Assert.assertEquals(e.getClass(), response.getClass());

@@ -17,10 +17,14 @@ public class TestClassUtilGetClassName {
     @Parameterized.Parameters
     public static Collection<Object[]> getTestParameters() {
         return Arrays.asList(new Object[][]{
+                // Suite di Test
                 { TestClass1.class, "TestClass1" },
                 { int.class, "int" },
                 { null, null },
                 { "test".getClass(), "String" },
+
+                // Coverage
+                { int[][].class, "int[][]" },
         });
     }
 
